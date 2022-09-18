@@ -76,7 +76,7 @@ namespace File_reader
             var result = Enumerable.Range(0, Brand.Count).Where(i => Brand[i] == need).ToList();
             printByIndex(result);
         }
-
+        //Cool
         void printByIndex(List<int> i) 
         {
             //throw new Exception("\"printByIndex\" function in Car Class is not Implemented ...");

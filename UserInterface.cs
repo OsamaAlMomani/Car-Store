@@ -18,7 +18,7 @@ namespace File_reader
             string intro2 = "It seems like you are not from Car's membership, you can become one of them, it comes with benefits : \n 1) 20% discount on maximum 4 years old.\n 2) Get more notifections on new cars and if there more discounts (Keeps you up-to-date).\n3) you become one of the firstest customer get updates on software.";
             string Subintro2 = "Perfect!, You can complete your operation.";
             string intro3 = "How I Can Serve You? ";
-            string intro4_options = "buy (1)\t search for a car (2)\n View list of cars (3) \t Exit (4)";
+            string intro4_options = "buy (1)\t search for a car (2) \n View list of cars (3) \t Exit (4)";
             Console.WriteLine(intro1);
             user_enter = Console.ReadLine();
             Console.WriteLine("Nice to meet you mr." + user_enter);
@@ -112,17 +112,26 @@ namespace File_reader
 
         private void step2()
         {
+            var car = new   Car();
             List<int> IDs = new List<int>();
             string Carsname = Console.ReadLine();
             search(Carsname);
             Console.WriteLine("How much cars do you want? ");
             var value = int.Parse(Console.ReadLine());
-            Console.WriteLine("Enter the ID/\'s : ");
+            Console.WriteLine("Enter the ID\\ \'s : ");
             for (int i = 1; i <= value; i++)
             {
                 Console.Write(i + "- ");
                 IDs.Add(int.Parse(Console.ReadLine()));
             }
+            SetPayment(IDs);
+        }
+
+        private void SetPayment(List<int> payment)
+        {
+            var car = new Car();
+            Console.WriteLine("Total amount: " + car.SetBasket(payment));
+            Console.WriteLine("Thanks for visited our store <3");
         }
 
         public UserInterface()

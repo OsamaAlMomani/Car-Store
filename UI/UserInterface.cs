@@ -126,9 +126,6 @@ namespace File_reader
 
         public UserInterface()
         {
-            Car car = new Car();
-
-            Customers customers = new Customers();
 
             intro(); 
         }

@@ -10,7 +10,7 @@ namespace File_reader
 {
     internal class Customers
     {
-        string Path_Customer_File = @"C:\Users\osama\source\repos\File reader\Customer.csv";
+        string Path_Customer_File = @"C:\Users\osama\source\repos\File reader\Customer Files\Customer.csv";
         //Customer,Age,Budget,Brand
         List<string> Name_Of_Customer = new List<string>();
         List<int> Age = new List<int>();

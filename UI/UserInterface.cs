@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace File_reader
 {
-    internal class UserInterface
+    internal class UserInterface : Car
     {
         void intro() 
         {
@@ -26,17 +26,16 @@ namespace File_reader
 
             var member_or_not = ismember(user_enter);
             
-            if (member_or_not)
+            if (!member_or_not)
             {
+                throw new Exception("not complete...");
+                Environment.Exit(0);
                 Console.WriteLine("----------------------------------------\n"+intro2);
-                Register();
+                //*******************
                 Console.WriteLine(Subintro2);
                 Console.WriteLine(intro4_options);
                 int Value_ = int.Parse(Console.ReadLine());
                 options(Value_,true);
-
-
-
             }
             else
             {
@@ -64,13 +63,6 @@ namespace File_reader
             var cus = new Customers();
             return cus.finder(member);
         }
-
-        
-        void NewMember(string Membername) { }
-        
-        string choose() { return "1"; }
-        
-        void Register() { }
         
         void options(int number,bool value)
         {
@@ -80,9 +72,8 @@ namespace File_reader
                 case 1:
                     step2();
                     break;
-                
-
-               case 2:
+              
+                case 2:
                     Environment.Exit(0);
                     break;
 
@@ -92,11 +83,7 @@ namespace File_reader
                         int Second_try = int.Parse (Console.ReadLine());
                        options(Second_try,false);
                     }
-                    else
-                    {
-                        Environment.Exit (0);
-                    }
-                    break;
+                    else Environment.Exit (0); break;
             }
         }
 
@@ -126,8 +113,8 @@ namespace File_reader
 
         public UserInterface()
         {
-
-            intro(); 
+            Customers customers = new Customers();
+            intro();
         }
 
     }

@@ -49,8 +49,6 @@ namespace File_reader
 
         }
 
-        // (1)
-        void buy() { Console.Write("Worked"); }
         
 
         // (2)

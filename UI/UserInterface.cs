@@ -49,7 +49,7 @@ namespace File_reader
 
         }
 
-        
+       
 
         // (2)
         void search(string query) 
@@ -65,7 +65,6 @@ namespace File_reader
             return cus.finder(member);
         }
 
-        void View_List(string Listname) { }
         
         void NewMember(string Membername) { }
         
@@ -77,20 +76,13 @@ namespace File_reader
         {
             switch (number)
             {
-                case 1:
-                    buy();
-                    break;
                 
-                case 2:
+                case 1:
                     step2();
                     break;
                 
-                case 3:
-                    Car car = new Car();
-                    //car.print();
-                    break;
 
-               case 4:
+               case 2:
                     Environment.Exit(0);
                     break;
 

@@ -22,8 +22,19 @@ namespace File_reader
         internal bool NOcar(int number);
         internal bool carhere(bool here);
     }
+    internal interface AdminTools
+    {
 
-    public class _admin : Admin
+    }
+    public class adminTools 
+    {
+    public adminTools()
+        {
+
+        }
+        
+    }
+    public class _admin : adminTools,Admin
     {
         string Path_Customer_File = @"C:\Users\osama\source\repos\File reader\Customer Files\Customer.csv";
         string Path_Cars_File = @"C:\Users\osama\source\repos\File reader\Cars Files\Cars.csv";
@@ -86,6 +97,10 @@ namespace File_reader
         bool Admin.Register()
         {
             throw new NotImplementedException();
+        }
+        public _admin()
+        {
+
         }
     }
 }

@@ -4,9 +4,10 @@ using File_reader.UI.Scripts;
 using System.Data.Common;
 using System.Net.Http.Headers;
 using System.Text;
+
 //cars data
-admin _admin=new admin();
-UserInterface user = new UserInterface();
+_admin admin=new _admin();
+var user = new UserInterface();
 
 
 

@@ -12,7 +12,6 @@ namespace File_reader
 
     public class Car
     {
-        bool value = true;
         string newLine = "*-------------------------------------------------------------------------------------------*";
         string Path_Cars_File = @"C:\Users\osama\source\repos\File reader\Cars Files\Cars.csv";
 
@@ -75,10 +74,12 @@ namespace File_reader
         
         public List<int> print(string need) 
         {
-
-            Payments = Enumerable.Range(0, Brand.Count).Where(i => Brand[i] == need).ToList();
-            printByIndex(Payments);
-            return Payments;
+           
+            
+                Payments = Enumerable.Range(0, Brand.Count).Where(i => Brand[i] == need).ToList();
+                printByIndex(Payments);
+                return Payments;
+            
         }
         
         void printByIndex(List<int> i) 
@@ -113,7 +114,15 @@ namespace File_reader
             return Amount;
         }
 
+        public void print_All()
+        {
 
+            for (int item = 0; item < Brand.Count; item++)
+            {
+                Console.WriteLine(newLine + "\n" + "ID: " + ID[item] + "   Brand: " + Brand[item] + "   Price: " + Price[item] + "   Rating: " + Rating[item] + "   Review: " + Review[item] + "   Number of Cars: " + InStock[item]);
+            }
+
+        }
 
     }
 }

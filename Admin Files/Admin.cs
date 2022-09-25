@@ -26,14 +26,15 @@ namespace File_reader
     {
 
     }
-    public class adminTools 
+    
+    public class adminTools : AdminTools
     {
-    public adminTools()
-        {
+        public adminTools()
+            {
 
-        }
-        
+            }    
     }
+
     public class _admin : adminTools,Admin
     {
         string Path_Customer_File = @"C:\Users\osama\source\repos\File reader\Customer Files\Customer.csv";

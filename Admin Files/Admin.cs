@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.Data;
 
 namespace File_reader
 {
@@ -24,18 +20,53 @@ namespace File_reader
     }
     internal interface AdminTools
     {
-
+        internal bool Update();
+        internal bool Edite();
+        internal bool Insert();
+        internal bool Delete();
+        internal bool DeleteAll();
+        internal bool Find(string name);
     }
-    
+
     public class adminTools : AdminTools
     {
         public adminTools()
-            {
+        {
+           
+        }
 
-            }    
+        bool AdminTools.Delete()
+        {
+            throw new NotImplementedException();
+        }
+
+        bool AdminTools.DeleteAll()
+        {
+            throw new NotImplementedException();
+        }
+
+        bool AdminTools.Edite()
+        {
+            throw new NotImplementedException();
+        }
+
+        bool AdminTools.Find(string name)
+        {
+            throw new NotImplementedException();
+        }
+
+        bool AdminTools.Insert()
+        {
+            throw new NotImplementedException();
+        }
+
+        bool AdminTools.Update()
+        {
+            throw new NotImplementedException();
+        }
     }
 
-    public class _admin : adminTools,Admin
+    public class _admin : adminTools, Admin
     {
         string Path_Customer_File = @"C:\Users\osama\source\repos\File reader\Customer Files\Customer.csv";
         string Path_Cars_File = @"C:\Users\osama\source\repos\File reader\Cars Files\Cars.csv";

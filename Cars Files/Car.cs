@@ -13,7 +13,7 @@ namespace File_reader
     public class Car
     {
         string newLine = "*-------------------------------------------------------------------------------------------*";
-        string Path_Cars_File = @"C:\Users\osama\source\repos\File reader\Cars Files\Cars.csv";
+        string Path_Cars_File = @"Cars.csv";
 
         //ID,Brand ,Price,Rating ,Review,Number of Cars,IsSoled
         List<int> Payments;

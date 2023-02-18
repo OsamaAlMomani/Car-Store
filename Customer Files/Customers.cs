@@ -10,8 +10,8 @@ namespace File_reader
 {
     internal class Customers
     {
-        string Path_Customer_File = @"C:\Users\osama\source\repos\File reader\Customer Files\Customer.csv";
-        //Customer,Age,Budget,Brand
+        string Path_Customer_File = "Customer.csv";
+        //Customer,Age,Budget,Brand 
         List<string> Name_Of_Customer = new List<string>();
         List<int> Age = new List<int>();
         List<float> Budget = new List<float>();
@@ -61,7 +61,7 @@ namespace File_reader
                 case "name":
                     for (int i = 0; i < Name_Of_Customer.Count; i++)
                     {
-                        Console.WriteLine(Name_Of_Customer[i]);
+                        Console.WriteLine(Name_Of_Customer[i]); 
                     }
                     break;
                 case "age":
